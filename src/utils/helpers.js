@@ -4,17 +4,19 @@
 
 /**
  * Wrap each character of a string in an animated span.
- * Spaces are replaced with non-breaking spaces so they preserve width.
+ * Words are wrapped in a non-breaking word span so they never split mid-word.
  */
 export function splitLetters(text) {
   return text
-    .split('')
-    .map((char) =>
-      char === ' '
-        ? '<span class="letter space" aria-hidden="true">&nbsp;</span>'
-        : `<span class="letter" aria-hidden="true">${char}</span>`
-    )
-    .join('');
+    .split(' ')
+    .map((word) => {
+      const letters = word
+        .split('')
+        .map((char) => `<span class="letter" aria-hidden="true">${char}</span>`)
+        .join('');
+      return `<span class="word-span">${letters}</span>`;
+    })
+    .join('<span class="letter space" aria-hidden="true">&nbsp;</span>');
 }
 
 /** Clamp a number between min and max. */
