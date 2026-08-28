@@ -1,0 +1,17 @@
+{
+  "name": "Adithyan S Pillai — Software Engineer",
+  "short_name": "Adithyan Portfolio",
+  "description": "Portfolio of Adithyan S Pillai — Software Engineer specialising in React, Node.js, Python, and Mobile Development.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050a14",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
