@@ -28,7 +28,7 @@ export const CONFIG = {
   // ─── About ──────────────────────────────────────────────────────────────────
   about: {
     tagline:     'Crafting experiences\nthrough code.',
-    bio:         'I am Adithyan S Pillai, currently in my final year of B.Tech in Computer Science at Carmel College of Engineering and Technology, under the esteemed APJ Abdul Kalam Technological University. With a passion for technology and a keen interest in software development, I have honed my skills in various programming languages, web development frameworks, and software tools.',
+    bio:         'I am Adithyan S Pillai, accured B.Tech in Computer Science from Carmel College of Engineering and Technology, under the esteemed APJ Abdul Kalam Technological University. With a passion for technology and a keen interest in software development, I have honed my skills in various programming languages, web development frameworks, and software tools.',
     university:  'Carmel College of Engineering and Technology',
     degree:      'B.Tech in Computer Science and Engineering',
   },
