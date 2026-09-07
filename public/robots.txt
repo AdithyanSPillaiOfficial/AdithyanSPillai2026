@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap URL
-Sitemap: https://adithyanspillai.in/sitemap.xml
+Sitemap: https://www.adithyanspillai.in/sitemap.xml
