@@ -114,21 +114,37 @@ async function init() {
   const hamburger = document.querySelector('.nav-hamburger');
   const navLinks  = document.querySelector('.nav-links');
 
+  function closeMobileNav() {
+    if (!hamburger || !navLinks) return;
+    hamburger.setAttribute('aria-expanded', 'false');
+    navLinks.classList.remove('is-open');
+    hamburger.classList.remove('is-open');
+    document.body.classList.remove('nav-is-open');
+    lenis.start();
+  }
+
+  function openMobileNav() {
+    if (!hamburger || !navLinks) return;
+    hamburger.setAttribute('aria-expanded', 'true');
+    navLinks.classList.add('is-open');
+    hamburger.classList.add('is-open');
+    document.body.classList.add('nav-is-open');
+    lenis.stop();
+  }
+
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
       const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!isOpen));
-      navLinks.classList.toggle('is-open');
-      hamburger.classList.toggle('is-open');
-      document.body.classList.toggle('nav-is-open');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
     });
 
     navLinks.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
-        hamburger.setAttribute('aria-expanded', 'false');
-        navLinks.classList.remove('is-open');
-        hamburger.classList.remove('is-open');
-        document.body.classList.remove('nav-is-open');
+        closeMobileNav();
       });
     });
   }
